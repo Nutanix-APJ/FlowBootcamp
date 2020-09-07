@@ -1,15 +1,15 @@
 .. _windows_tools_vm:
 
 ----------------
-Windows Tools VM
+Windows工具VM
 ----------------
 
-Overview
+总览
 +++++++++
 
-This Windows Server 2012 R2 image comes pre-installed with a number of tools, including:
+此Windows Server 2012 R2镜像预装来许多工具，包括:
 
-- Microsoft Remote Server Administration Tools (RSAT)
+- Microsoft远程服务器管理工具 (RSAT)
 - PuTTY, CyberDuck, WinSCP
 - Sublime Text 3, Visual Studio Code
 - OpenOffice
@@ -17,18 +17,18 @@ This Windows Server 2012 R2 image comes pre-installed with a number of tools, in
 - pgAdmin
 - Chocolatey Package Manager
 
-Deploy this VM on your assigned cluster if directed to do so as part of **Lab Setup**.
+在**Lab Setup**上将此VM部署到您分配的群集上.
 
 .. raw:: html
 
-  <strong><font color="red">Only deploy the VM once, it does not need to be cleaned up as part of any lab completion.</font></strong>
+  <strong><font color="red">仅部署一次虚拟机，不需要在实验完成后进行清理</font></strong>
 
-Deploying Tools VM
+部署工具VM
 ++++++++++++++++++
 
-In **Prism Central** > select :fa:`bars` **> Virtual Infrastructure > VMs**, and click **Create VM**.
+在 **Prism Central** > 选择 :fa:`bars` **> Virtual Infrastructure > VMs**, 点击 **Create VM**.
 
-Fill out the following fields:
+填写以下字段：
 
 - **Name** - *Initials*-Windows-ToolsVM
 - **Description** - (Optional) Description for your VM.
@@ -36,33 +36,33 @@ Fill out the following fields:
 - **Number of Cores per vCPU** - 2
 - **Memory** - 4 GiB
 
-- Select **+ Add New Disk**
+- 选择 **+ Add New Disk**
     - **Type** - DISK
     - **Operation** - Clone from Image Service
     - **Image** - ToolsVM.qcow2
-    - Select **Add**
+    - 选择 **Add**
 
 .. -------------------------------------------------------------------------------------
-.. The Below as soon as 5.11 is GA and we want to run that version for our workshops!!!!
+.. 在 5.11 版本发布后我们的实验会按照新版本的配置要求来实现!!!!
 
 .. - **Boot Configuration**
- ..  - Leave the default selected **Legacy Boot**
+ ..  - 默认选择 **Legacy Boot**
 
-   .. .. note::
-   ..  At the following URL you can find the supported Operating Systems
+   .. .. 注意::
+   ..  通过下面这个URL，您可以找到支持的操作系统
    ..  http://my.nutanix.com/uefi_boot_support
 
 .. -------------------------------------------------------------------------------------
 
-- Select **Add New NIC**
+- 选择 **Add New NIC**
     - **VLAN Name** - Secondary
-    - Select **Add**
+    - 选择 **Add**
 
-Click **Save** to create the VM.
+点击 **Save** 创建 VM.
 
-Power on the VM.
+开启VM.
 
-Login to the VM via RDP or Console session, using the following credentials:
+使用以下用户名和密码通过RDP或控制台登录到VM:
 
 - **Username** - NTNXLAB\\Administrator
 - **password** - nutanix/4u
