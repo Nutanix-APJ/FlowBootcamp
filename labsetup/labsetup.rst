@@ -1,50 +1,50 @@
 .. _labsetup:
 
 ----------------------
-Calm Lab Setup
+Calm 实验设置
 ----------------------
 
 
 
 
-Configuring a Project
+配置一个 Project（项目）
 +++++++++++++++++++++
 
-In this lab you will leverage multiple pre-built Calm Blueprints to provision your applications...
+在本实验中，您将利用多个配置的的“ Calm Blueprints”来设置您的应用程序
 
-#. In **Prism Central**, select :fa:`bars` **> Services > Calm**.\
+#. 在 **Prism Central**, 选择 :fa:`bars` **> Services > Calm**.\
 
-#. Select **Projects** from the lefthand menu and click **+ Create Project**.
+#. 从左侧菜单中选择选择 **Projects** 然后单击 **+ Create Project**.
 
    .. figure:: images/2.png
 
-#. Fill out the following fields:
+#. 填写以下字段:
 
    - **Project Name** - *Initials*\ -Project
-   - Under **Users, Groups, and Roles**, select **+ User**
+   - 在 **Users, Groups, and Roles**, 选择 **+ User**
       - **Name** - Administrators
       - **Role** - Project Admin
       - **Action** - Save
-   - Under **Infrastructure**, select **Select Provider > Nutanix**
-   - Click **Select Clusters & Subnets**
-   - Select *Your Assigned Cluster*
-   - Under **Subnets**, select **Primary**, **Secondary**, and click **Confirm**
-   - Mark **Primary** as the default network by clicking the :fa:`star`
+   - 在**Infrastructure**, 选择 **Select Provider > Nutanix**
+   - 点击 **Select Clusters & Subnets**
+   - 选择 *Your Assigned Cluster*
+   - 在 **Subnets**, 选择 **Primary**, **Secondary**, 点击 **Confirm**
+   - 通过单击 :fa:`star` 将 **Primary** 标记为默认网络
 
    .. figure:: images/3.png
 
-#. Click **Save & Configure Environment**.
+#. 点击 **Save & Configure Environment**.
 
-Deploying a Windows Tools VM
+部署Windows Tools VM
 ++++++++++++++++++++++++++++
 
-Some exercises in this track will depend on leveraging the Windows Tools VM. Follow the below steps to provision your personal VM from a disk image.
+本实验中的一些配置需要利用Windows Tools VM。请按照以下步骤从磁盘镜像配置您的个人VM。
 
-#. In **Prism Central**, select :fa:`bars` **> Virtual Infrastructure > VMs**.
+#. 在 **Prism Central**, 选择 :fa:`bars` **> Virtual Infrastructure > VMs**.
 
-#. Click **+ Create VM**.
+#. 点击 **+ Create VM**.
 
-#. Fill out the following fields to complete the user VM request:
+#. 填写以下字段以完成用户VM请求:
 
    - **Name** - *Initials*\ -WinToolsVM
    - **Description** - Manually deployed Tools VM
@@ -52,16 +52,16 @@ Some exercises in this track will depend on leveraging the Windows Tools VM. Fol
    - **Number of Cores per vCPU** - 1
    - **Memory** - 4 GiB
 
-   - Select **+ Add New Disk**
+   - 选择 **+ Add New Disk**
       - **Type** - DISK
       - **Operation** - Clone from Image Service
       - **Image** - WinToolsVM.qcow2
-      - Select **Add**
+      - 选择 **Add**
 
-   - Select **Add New NIC**
+   - 选择 **Add New NIC**
       - **VLAN Name** - Secondary
-      - Select **Add**
+      - 选择 **Add**
 
-#. Click **Save** to create the VM.
+#. 选择 **Save** to create the VM.
 
-#. Power on your *Initials*\ **-WinToolsVM**.
+#. 开启 *Initials*\ **-WinToolsVM**.
